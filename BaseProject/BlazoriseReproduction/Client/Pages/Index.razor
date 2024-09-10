@@ -1,10 +1,11 @@
 ﻿@page "/"
+@using Blazorise.LoadingIndicator
 
-<Validations>
-  <Fields>
+<LoadingIndicator>
+  <Validations>
     <Component @bind-Val="@_val" />
-  </Fields>
-</Validations>
+  </Validations>
+</LoadingIndicator>
 
 @code {
   private string _val = "";

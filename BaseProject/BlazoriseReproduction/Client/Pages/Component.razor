@@ -1,8 +1,6 @@
 <Validation Validator="@Validate">
   <Field>
-    <FieldBody>
-      <MemoEdit Text="@Val" TextChanged="@ValChanged" />
-    </FieldBody>
+    <TextEdit Text="@Val" TextChanged="@ValChanged" />
   </Field>
 </Validation>
 
@@ -11,8 +9,6 @@
   public string Val { get; set; }
   [Parameter]
   public EventCallback<string> ValChanged { get; set; }
-
-  private string _val;
   
   private void Validate(ValidatorEventArgs args)
   {
