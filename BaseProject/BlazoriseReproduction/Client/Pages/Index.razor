@@ -1,68 +1,11 @@
 ﻿@page "/"
 
+<Validations>
+  <Fields>
+    <Component @bind-Val="@_val" />
+  </Fields>
+</Validations>
 
-<DataGrid
-  TItem="bool"
-  Editable
-  EditMode="DataGridEditMode.Popup"
-  PopupSize="ModalSize.Fullscreen"
-  Data="@data">
-
-<DataGridColumns>
-
-    <DataGridCommandColumn />
-
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-    <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-  <DataGridColumn Editable Caption="Test"></DataGridColumn>
-    <DataGridColumn Editable Caption="Test"></DataGridColumn>
-    <DataGridColumn Editable Caption="Test"></DataGridColumn>
-</DataGridColumns>
-
-</DataGrid>
-
-  @code{
-  List<bool> data = new List<bool>() {true, true, true};
-  }
+@code {
+  private string _val = "";
+}

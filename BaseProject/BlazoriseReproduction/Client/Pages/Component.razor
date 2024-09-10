@@ -1,0 +1,21 @@
+<Validation Validator="@Validate">
+  <Field>
+    <FieldBody>
+      <MemoEdit Text="@Val" TextChanged="@ValChanged" />
+    </FieldBody>
+  </Field>
+</Validation>
+
+@code {
+  [Parameter]
+  public string Val { get; set; }
+  [Parameter]
+  public EventCallback<string> ValChanged { get; set; }
+
+  private string _val;
+  
+  private void Validate(ValidatorEventArgs args)
+  {
+    args.Status = args.Value is string strVal && strVal.Length % 5 == 0 ? ValidationStatus.Error : ValidationStatus.Success;
+  }
+}
