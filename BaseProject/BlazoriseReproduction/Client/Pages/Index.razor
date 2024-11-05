@@ -1,4 +1,11 @@
 ﻿@page "/"
 
+<ListView TItem="int"
+          Data="list"
+          TextField="item => item.ToString()"
+          ValueField="item => item.ToString()"
+          Virtualize />
 
-
+@code {
+  List<int> list = Enumerable.Range(0, 1000).ToList();
+}
